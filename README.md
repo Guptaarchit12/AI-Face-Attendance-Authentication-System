@@ -456,3 +456,6 @@ This system provides a solid foundation for face-based attendance tracking with:
 - Room for future enhancements
 
 The system handles varying lighting conditions and provides good accuracy for typical office environments. For production deployment, consider implementing additional security measures and scalability improvements.
+## Screenshots
+
+<img width="1600" height="728" alt="image" src="https://github.com/user-attachments/assets/507b3b3a-6c13-422a-a9b2-cf637f89da81" />
