@@ -455,6 +455,45 @@ This system provides a solid foundation for face-based attendance tracking with:
 - Basic spoof prevention
 - Room for future enhancements
 
+  ## System Architecture
+```mermaid
+[```mermaid
+graph TD
+    A[User] --> B[Camera Input]
+    B --> C{Action Type?}
+    
+    C -->|Registration| D[Face Capture]
+    D --> E[Generate 128-d Encoding]
+    E --> F[Average 5 Samples]
+    F --> G[(Face Encodings Database)]
+    
+    C -->|Recognition| H[Detect Face]
+    H --> I[Generate Encoding]
+    I --> J[Compare with Known Faces]
+    J --> K{Match Found?}
+    
+    K -->|Yes| L[Calculate Confidence]
+    K -->|No| M[Access Denied]
+    
+    L --> N{Confidence > Threshold?}
+    N -->|Yes| O[Identify User]
+    N -->|No| M
+    
+    O --> P{Duplicate Check}
+    P -->|Pass| Q[Record Attendance]
+    P -->|Fail| R[Prevent Duplicate]
+    
+    Q --> S[(Attendance Database)]
+    
+    style D fill:#e1f5ff
+    style H fill:#e1f5ff
+    style G fill:#ffe1e1
+    style S fill:#ffe1e1
+    style M fill:#ffcccc
+    style Q fill:#ccffcc
+```
+]
+
 The system handles varying lighting conditions and provides good accuracy for typical office environments. For production deployment, consider implementing additional security measures and scalability improvements.
 ## Screenshots of the output
 
