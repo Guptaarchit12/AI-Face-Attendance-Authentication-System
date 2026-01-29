@@ -136,6 +136,12 @@ python attendance_system.py
 **5. Exit**
 - Closes the application
 
+  ## System Architecture
+
+
+  <img width="2786" height="8191" alt="Untitled diagram-2026-01-29-105746" src="https://github.com/user-attachments/assets/489688fc-26ee-4410-913c-2edcbd663b6e" />
+
+
 ## Data Storage
 
 ### File Structure
